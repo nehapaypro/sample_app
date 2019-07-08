@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Subsidiaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firm</th>
+      <th>Country</th>
+      <th>Adress</th>
+      <th>Ceo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subsidiaries.each do |subsidiary| %>
+      <tr>
+        <td><%= subsidiary.firm %></td>
+        <td><%= subsidiary.country %></td>
+        <td><%= subsidiary.adress %></td>
+        <td><%= subsidiary.CEO %></td>
+        <td><%= link_to 'Show', subsidiary %></td>
+        <td><%= link_to 'Edit', edit_subsidiary_path(subsidiary) %></td>
+        <td><%= link_to 'Destroy', subsidiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subsidiary', new_subsidiary_path %>

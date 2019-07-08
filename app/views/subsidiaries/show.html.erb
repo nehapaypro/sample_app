@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firm:</strong>
+  <%= @subsidiary.firm %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @subsidiary.country %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @subsidiary.adress %>
+</p>
+
+<p>
+  <strong>Ceo:</strong>
+  <%= @subsidiary.CEO %>
+</p>
+
+<%= link_to 'Edit', edit_subsidiary_path(@subsidiary) %> |
+<%= link_to 'Back', subsidiaries_path %>
